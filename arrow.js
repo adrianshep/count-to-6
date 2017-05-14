@@ -1,5 +1,5 @@
 var inputs = process.argv.slice(2);
-var result = inputs.map(inputs => inputs[0]).reduce((total, currentValue) => total + currentValue);
+var result = inputs.map(input => input[0]).reduce((total, currentValue) => total + currentValue);
 
 console.log(`[${inputs}] becomes "${result}"`);
 
@@ -8,8 +8,8 @@ console.log(`[${inputs}] becomes "${result}"`);
 Here's the official solution in case you want to compare notes:
 
 ────────────────────────────────────────────────────────────────────────────────
-    var inputs = process.argv.slice(2);
-    var result = inputs.map(s => s[0])
+    var inputs = process.argv.slice(2);   slice is taking all args after first two
+    var result = inputs.map(s => s[0])    [0] here is taking letter at [0]
                        .reduce((soFar, s) => soFar + s);
 
     console.log(`[${inputs}] becomes "${result}"`);
