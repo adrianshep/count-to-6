@@ -1,10 +1,10 @@
 let userArray = process.argv.slice(2);
 // userArray here equals e.g. [1, "jdoe", "jdoe@example.com", "John", "Doe"]
-
+let data = {};
 // what goes here?
-let [ , username, email, , , ] = userArray;
+[, data.username, data.email] = userArray;
 
-console.log(userArray); // {username: "jdoe", email: "john@doe.com"}
+console.log(data); // {username: "jdoe", email: "john@doe.com"}
 
 
 
