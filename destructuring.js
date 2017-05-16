@@ -10,6 +10,18 @@ console.log(data); // {username: "jdoe", email: "john@doe.com"}
 
 /*
 
+Here's the official solution in case you want to compare notes:
+
+────────────────────────────────────────────────────────────────────────────────
+    let args = process.argv.slice(2);
+    let result = {};
+
+    [, result.username, result.email] = args;
+    
+    console.log(result);
+
+────────────────────────────────────────────────────────────────────────────────
+
 DESTRUCTURING
  Exercise 5 of 10
 
