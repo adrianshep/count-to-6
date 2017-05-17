@@ -1,10 +1,20 @@
+let arr = process.argv.slice(2);
 
+let min = Math.min( ...arr );
 
-
-
-
+console.log(`The minimum of [${arr}] is ${min}`);
 
 /*
+
+Here's the official solution in case you want to compare notes:
+
+────────────────────────────────────────────────────────────────────────────────
+    var numbers = process.argv.slice(2);
+    var min = Math.min(...numbers);
+
+    console.log(`The minimum of [${numbers}] is ${min}`);
+
+────────────────────────────────────────────────────────────────────────────────
 
 SPREAD
  Exercise 6 of 10
