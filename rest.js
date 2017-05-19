@@ -1,17 +1,13 @@
-function sum(...args) {
-    var result = 0;
-    args.forEach(function (value) {
-        result += value;
-    });
-
-    return result;
-}
-
-sum(1, 2, 3); // 6
-
-module.exports = function average(/ what goes here /) {
+module.exports = function average(...args) {
     // what goes here?
-};
+    var counter = 0;
+    var results = 0;
+    args.forEach(function (value) {
+      counter+=;
+      result += value;
+    });
+    return (result/counter);
+  }
 
 
 /*
