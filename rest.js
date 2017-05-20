@@ -6,7 +6,7 @@ module.exports = function average(...args) {
       counter+=;
       result += value;
     });
-    return (result/counter);
+    return result/counter;
   }
 
 
