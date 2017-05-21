@@ -6,6 +6,16 @@ module.exports = (...args) => {
 
 /*
 
+Here's the official solution in case you want to compare notes:
+
+────────────────────────────────────────────────────────────────────────────────
+    module.exports = (...args) => {
+        var sum = args.reduce((soFar, value) => soFar + value, 0);
+        return sum / args.length;
+    };
+
+────────────────────────────────────────────────────────────────────────────────
+
 REST
 Exercise 7 of 10
 
