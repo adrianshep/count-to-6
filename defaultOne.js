@@ -1,4 +1,6 @@
-
+module.exports = function midpoint(/* what goes here */) {
+    // what goes here?
+};
 
 
 
