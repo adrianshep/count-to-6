@@ -8,8 +8,6 @@
 DEFAULT ARGUMENTS, Part 1
  Exercise 8 of 10
 
-(node:4802) DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir()
-instead.
 In ES6, functions can take default arguments:
 
     function sayHello(greeting = "Hello", name = "CampJS") {
