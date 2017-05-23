@@ -1,5 +1,5 @@
-module.exports = function midpoint(/* what goes here */) {
-    // what goes here?
+module.exports = function midpoint(greeting = "Hello", name = "CampJS") {
+    console.log(`${greeting} ${name}!`);
 };
 
 
