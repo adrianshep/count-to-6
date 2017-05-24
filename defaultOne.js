@@ -7,6 +7,13 @@ module.exports = function midpoint(lower = 0, upper = 1) {
 
 /*
 
+Here's the official solution in case you want to compare notes:
+
+────────────────────────────────────────────────────────────────────────────────
+    module.exports = (x = 0, y = 1) => (x + y) / 2;
+
+────────────────────────────────────────────────────────────────────────────────
+
 DEFAULT ARGUMENTS, Part 1
  Exercise 8 of 10
 
