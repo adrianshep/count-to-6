@@ -1,4 +1,6 @@
-
+module.exports = function(arg, makeImportant = arg => arg + ('!'.repeat(arg.length)) {
+    console.log(makeImportant(arg));
+}
 
 
 
@@ -43,5 +45,11 @@ string. So:
 
 Bonus ES6 knowledge that might be helpful: ES6 includes a
 String.prototype.repeat that does exactly what you'd imagine.
+
+/**
+ * str: String
+ * count: Number
+
+let resultString = str.repeat(count);
 
 */
