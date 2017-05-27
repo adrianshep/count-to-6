@@ -1,11 +1,19 @@
-module.exports = function(arg, makeImportant = arg => arg + ('!'.repeat(arg.length)) {
-    console.log(makeImportant(arg));
-}
+module.exports =
+    (string, bangs = string.length) => string + "!".repeat(bangs);
 
 
 
 
 /*
+
+Here's the official solution in case you want to compare notes:
+
+────────────────────────────────────────────────────────────────────────────────
+    module.exports =
+        (string, bangs = string.length) => string + "!".repeat(bangs);
+
+────────────────────────────────────────────────────────────────────────────────
+
 
 DEFAULT ARGUMENTS, Part 2
  Exercise 9 of 10
