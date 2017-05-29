@@ -68,6 +68,21 @@ regular expressions, e.g.
 
     var replacedS = originalS.replace(/a/g, "b");
 
++++++++++++++++++++++++++++++++++++++++++++++
+
+    String.prototype.replace():
+
+    str.replace(regexp|substr, newSubstr|function)
+
+    function replacer(match, p1, p2, p3, offset, string) {
+      // p1 is nondigits, p2 digits, and p3 non-alphanumerics
+      return [p1, p2, p3].join(' - ');
+    }
+    var newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
+    console.log(newString);  // abc - 12345 - #$*%
+
++++++++++++++++++++++++++++++++++++++++++++++
+
 The outline of your program should look something like this:
 
     console.log(html`<b>${process.argv[2]} says</b>: "${process.argv[3]}"`);
@@ -82,5 +97,24 @@ your html function.
 
 Finally, feel free to use rest parameters if you think that would make things
 easier!
+
+Rest parameters are used when you want to write a function that accepts a
+variadic number of arguments, but acts on them as if they were an array.
+For example:
+
+   function sum(...args) {
+       var result = 0;
+       args.forEach(function (value) {
+           result += value;
+       });
+
+       return result;
+   }
+
+   sum(1, 2, 3); // 6
+
+Note that in the above example, args is a real array, with a forEach method and
+everything. Just like the spread operator helps us get rid of .apply, rest
+parameters help us get rid of Array.prototype.slice.call(arguments).
 
 */
