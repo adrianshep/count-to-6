@@ -1,7 +1,14 @@
 console.log(html`<b>${process.argv[2]} says</b>: "${process.argv[3]}"`);
 
-function html(* what goes here? *) {
+function html(...comments) {
     // what goes here?
+        comments.forEach(function (value) {
+            result += value;
+        });
+
+        return result;
+    }
+    var replacedS = originalS.replace(/a/g, "b")
     // don't forget to return the escaped string!
 }
 
