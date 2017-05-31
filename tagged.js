@@ -3,7 +3,11 @@ console.log(html`<b>${process.argv[2]} says</b>: "${process.argv[3]}"`);
 function html(...comments) {
     // what goes here?
         comments.forEach(function (value) {
-            result += value;
+          var replacedA = value.replace(/'/, "&apos");
+          var replacedQ = value.replace(/""/, "&quot");
+          var replacedL = value.replace(/</, "&lt");
+          var replacedG = value.replace(/>/, "&gt");
+          var replacedM = value.replace(/&/, "&amp");
         });
 
         return result;
@@ -14,6 +18,12 @@ function html(...comments) {
 
 
 /*
+
+' | &apos;
+" | &quot;
+< | &lt;
+> | &gt;
+& | &amp;
 
 TAGGED TEMPLATE STRINGS
  Exercise 10 of 10
