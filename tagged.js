@@ -4,7 +4,7 @@ function html(...comments) {
     // what goes here?
         comments.forEach(function (value) {
           var replacedA = value.replace(/'/, "&apos");
-          var replacedQ = value.replace(/""/, "&quot");
+          var replacedQ = value.replace(/"/, "&quot");
           var replacedL = value.replace(/</, "&lt");
           var replacedG = value.replace(/>/, "&gt");
           var replacedM = value.replace(/&/, "&amp");
