@@ -1,21 +1,21 @@
 console.log(html`<b>${process.argv[2]} says</b>: "${process.argv[3]}"`);
 
-function html(...comments) {
-    // what goes here?
-        comments.forEach(function (value) {
-          var replacedA = value.replace(/'/, "&apos");
-          var replacedQ = value.replace(/"/, "&quot");
-          var replacedL = value.replace(/</, "&lt");
-          var replacedG = value.replace(/>/, "&gt");
-          var replacedM = value.replace(/&/, "&amp");
-        });
-
-        return result;
+function html(pieces, ...substitutions) {
+    var result = pieces[0];
+    for (var i = 0; i < substitutions.length; ++i) {
+        result += escape(substitutions[i]) + pieces[i + 1];
     }
-    var replacedS = originalS.replace(/a/g, "b")
-    // don't forget to return the escaped string!
+
+    return result;
 }
 
+function escape(s) {
+    return s.replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/'/g, "&apos;")
+            .replace(/"/g, "&quot;");
+}
 
 /*
 
