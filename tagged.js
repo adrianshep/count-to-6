@@ -19,11 +19,31 @@ function escape(s) {
 
 /*
 
-' | &apos;
-" | &quot;
-< | &lt;
-> | &gt;
-& | &amp;
+Here's the official solution in case you want to compare notes:
+
+────────────────────────────────────────────────────────────────────────────────
+    console.log(html`<b>${process.argv[2]} says</b>: "${process.argv[3]}"`);
+
+    function html(pieces, ...substitutions) {
+        var result = pieces[0];
+        for (var i = 0; i < substitutions.length; ++i) {
+            result += escape(substitutions[i]) + pieces[i + 1];
+        }
+
+        return result;
+    }
+
+    function escape(s) {
+        return s.replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/'/g, "&apos;")
+                .replace(/"/g, "&quot;");
+    }
+
+────────────────────────────────────────────────────────────────────────────────
+
+You've finished all the challenges! Hooray!
 
 TAGGED TEMPLATE STRINGS
  Exercise 10 of 10
